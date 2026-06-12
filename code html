@@ -1,0 +1,198 @@
+import React, { useId, useState } from "react";
+import download2RemovebgPreview1 from "./download-2-removebg-preview-1.png";
+import ellipse2 from "./ellipse-2.png";
+import image from "./image.svg";
+import line6 from "./line-6.svg";
+import line7 from "./line-7.svg";
+import line8 from "./line-8.svg";
+import padlock1 from "./padlock-1.png";
+import rectangle134 from "./rectangle-134.png";
+import user1 from "./user-1.png";
+import vector from "./vector.svg";
+import vector2 from "./vector-2.svg";
+
+export const Login = (): JSX.Element => {
+  const [emailOrUsername, setEmailOrUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const emailId = useId();
+  const passwordId = useId();
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
+  return (
+    <main className="overflow-hidden bg-[linear-gradient(0deg,rgba(255,255,255,0.35)_0%,rgba(255,255,255,0.35)_100%),linear-gradient(0deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)] w-full min-w-[430px] min-h-[932px] relative">
+      <header className="absolute top-0 left-0 w-[432px] h-[67px]">
+        <div className="absolute top-0 left-0 w-[430px] h-[67px] bg-white" />
+        <div className="absolute top-[15px] left-10 w-[377px] [font-family:'Poppins-ExtraBold',Helvetica] font-extrabold text-black text-xl tracking-[0] leading-[normal]">
+          19.20
+        </div>
+        <img
+          className="absolute w-[20.14%] h-[70.15%] top-[29.85%] left-[79.86%]"
+          alt="Status icons"
+          src={image}
+        />
+        <img
+          className="absolute top-5 left-[375px] w-[34px] h-[15px] object-cover"
+          alt="Battery indicator"
+          src={rectangle134}
+        />
+      </header>
+      <img
+        className="absolute top-[84px] left-[179px] w-[82px] h-[81px] object-cover"
+        alt="App logo"
+        src={ellipse2}
+      />
+      <section aria-labelledby="login-title" className="absolute inset-0">
+        <h1
+          id="login-title"
+          className="absolute top-[182px] left-[111px] [font-family:'Poppins-Bold',Helvetica] font-bold text-black text-[23px] tracking-[0] leading-[normal]"
+        >
+          Selamat Datang !
+        </h1>
+        <p className="absolute top-[229px] left-[68px] w-[297px] [font-family:'Ponnala-Regular',Helvetica] font-normal text-black text-[13px] text-center tracking-[0] leading-[normal]">
+          Masuk untuk melanjutkan tabunganmu dan raih impianmu
+        </p>
+        <form onSubmit={handleSubmit} className="contents">
+          <label
+            htmlFor={emailId}
+            className="absolute top-[291px] left-[22px] [font-family:'Poppins-BoldItalic',Helvetica] font-bold italic text-black text-[13px] text-center tracking-[0] leading-[normal]"
+          >
+            Email atau Username
+          </label>
+          <div className="absolute top-80 left-5 w-[389px] h-[43px] bg-[#eaeef9] rounded-[9px]" />
+          <img
+            className="absolute top-[325px] left-[37px] w-[30px] h-[30px] aspect-[1] object-cover pointer-events-none"
+            alt="User"
+            src={user1}
+          />
+          <input
+            id={emailId}
+            name="emailOrUsername"
+            type="text"
+            autoComplete="username"
+            value={emailOrUsername}
+            onChange={(event) => setEmailOrUsername(event.target.value)}
+            aria-label="Email atau Username"
+            className="absolute top-80 left-5 w-[389px] h-[43px] rounded-[9px] pl-[64px] pr-4 [font-family:'Poppins-Regular',Helvetica] text-black text-[13px] placeholder:text-black/40"
+          />
+          <label
+            htmlFor={passwordId}
+            className="absolute top-[393px] left-5 [font-family:'Poppins-BoldItalic',Helvetica] font-bold italic text-black text-[13px] text-center tracking-[0] leading-[normal]"
+          >
+            Kata Sandi
+          </label>
+          <div className="absolute top-[420px] left-5 w-[389px] h-[43px] bg-[#eaeef9] rounded-[9px]" />
+          <img
+            className="absolute top-[427px] left-[37px] w-[30px] h-[30px] aspect-[1] object-cover pointer-events-none"
+            alt="Padlock"
+            src={padlock1}
+          />
+          <input
+            id={passwordId}
+            name="password"
+            type={showPassword ? "text" : "password"}
+            autoComplete="current-password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            aria-label="Kata Sandi"
+            className="absolute top-[420px] left-5 w-[389px] h-[43px] rounded-[9px] pl-[64px] pr-[60px] [font-family:'Poppins-Regular',Helvetica] text-black text-[13px] placeholder:text-black/40"
+          />
+          <button
+            type="button"
+            aria-label={
+              showPassword ? "Sembunyikan kata sandi" : "Tampilkan kata sandi"
+            }
+            aria-pressed={showPassword}
+            onClick={() => setShowPassword((previous) => !previous)}
+            className="absolute top-[429px] left-[371px] flex items-center justify-center w-10 h-8"
+          >
+            <svg
+              width="26"
+              height="18"
+              viewBox="0 0 26 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="block"
+              aria-hidden="true"
+            >
+              <path
+                d="M13 0C7.09091 0 2.04545 3.73154 0 9C2.04545 14.2685 7.09091 18 13 18C18.9091 18 23.9545 14.2685 26 9C23.9545 3.73154 18.9091 0 13 0ZM13 15C9.72727 15 7.09091 12.3137 7.09091 9C7.09091 5.68629 9.72727 3 13 3C16.2727 3 18.9091 5.68629 18.9091 9C18.9091 12.3137 16.2727 15 13 15ZM13 5.4C11.0364 5.4 9.45455 7.01177 9.45455 9C9.45455 10.9882 11.0364 12.6 13 12.6C14.9636 12.6 16.5455 10.9882 16.5455 9C16.5455 7.01177 14.9636 5.4 13 5.4Z"
+                fill="#BFBFBF"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            className="absolute top-[466px] left-[290px] [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-black text-[13px] tracking-[0] leading-[normal]"
+          >
+            Lupa kata sandi?
+          </button>
+          <button
+            type="submit"
+            className="absolute top-[497px] left-5 w-[389px] h-[39px] bg-blue-400 rounded-[9px]"
+            aria-label="Masuk"
+          />
+          <div className="absolute top-[507px] left-[185px] [font-family:'Poppins-BoldItalic',Helvetica] font-bold italic text-black text-[13px] text-center tracking-[0] leading-[normal] pointer-events-none">
+            Masuk
+          </div>
+        </form>
+        <img
+          className="top-[581px] left-[22px] w-[157px] absolute h-px object-cover"
+          alt="Line"
+          src={line6}
+        />
+        <img
+          className="top-[581px] left-[252px] w-[157px] absolute h-px object-cover"
+          alt="Line"
+          src={line7}
+        />
+        <div className="absolute top-[575px] left-[201px] [font-family:'Ponnala-Regular',Helvetica] font-normal text-black text-[13px] text-center tracking-[0] leading-[normal]">
+          atau
+        </div>
+        <button
+          type="button"
+          className="absolute top-[650px] left-[22px] w-[389px] h-[43px] bg-[#eaeef9] rounded-[9px]"
+          aria-label="Masuk dengan Google"
+        />
+        <img
+          className="absolute top-[659px] left-[118px] w-[23px] h-6 aspect-[0.95] object-cover pointer-events-none"
+          alt="Google"
+          src={download2RemovebgPreview1}
+        />
+        <div className="absolute top-[662px] left-40 [font-family:'Poppins-MediumItalic',Helvetica] font-medium italic text-black text-xs text-center tracking-[0] leading-[normal] pointer-events-none">
+          Masuk dengan Google
+        </div>
+        <img
+          className="top-[743px] left-[22px] w-[389px] absolute h-px object-cover"
+          alt="Line"
+          src={line8}
+        />
+        <div className="absolute top-[780px] left-[153px] [font-family:'Poppins-MediumItalic',Helvetica] font-medium italic text-black text-xs text-center tracking-[0] leading-[normal]">
+          Belum punya akun?
+        </div>
+        <button
+          type="button"
+          className="absolute top-[798px] left-[149px] [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-blue-400 text-base tracking-[0] leading-[normal]"
+        >
+          Daftar Sekarang
+        </button>
+      </section>
+      <img
+        className="absolute w-[16.05%] h-[53.65%] top-[46.35%] left-[83.95%]"
+        alt="Vector"
+        src={vector}
+      />
+      <img
+        className="absolute w-[27.21%] h-[98.07%] top-0 left-[72.79%]"
+        alt="Vector"
+        src={vector2}
+      />
+    </main>
+  );
+};
+
+export default Login;
